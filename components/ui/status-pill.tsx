@@ -8,7 +8,7 @@ export function StatusPill({ children, className }: { children: React.ReactNode;
         className
       )}
     >
-      <span className="w-1.5 h-1.5 rounded-full bg-accent dark:bg-accent-dark" aria-hidden="true" />
+      <span className="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
       {children}
     </span>
   );
