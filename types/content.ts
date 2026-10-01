@@ -8,18 +8,21 @@ export interface Project {
   github?: string;
   live?: string;
   note?: string;
+  metric?: string;
+  tone?: "sage" | "coral" | "butter";
 }
 
 export interface CurrentlyItem {
-  category: "Learning" | "Building" | "Exploring";
+  category: "Building" | "Exploring" | "Learning";
   title: string;
   detail: string;
 }
 
-export interface InterestArea {
+export interface ExpertiseArea {
   domain: string;
   summary: string;
   topics: string[];
+  tone: "sage" | "coral" | "butter";
 }
 
 export interface NoteEntry {
@@ -28,6 +31,13 @@ export interface NoteEntry {
   summary: string;
   tag: string;
   readTime: string;
+}
+
+export interface Achievement {
+  title: string;
+  detail: string;
+  year: string;
+  tone: "sage" | "coral";
 }
 
 export interface SocialLink {

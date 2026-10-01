@@ -1,40 +1,39 @@
 import { Container } from "@/components/ui/container";
-import { SectionHeader } from "@/components/ui/section-header";
-import { notesData } from "@/content/site";
 
 export function Notes() {
   return (
-    <section id="notes" className="py-16 md:py-24 border-t border-line">
+    <section id="notes" className="py-20 md:py-28 border-b border-line">
       <Container>
-        <SectionHeader label="Notes" index="04" />
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold">
+              Notes
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight mt-2">
+              Technical notebook
+            </h2>
+          </div>
+          <p className="text-sm text-ink-soft max-w-[38ch] md:text-right leading-relaxed">
+            Experiments, debugging logs, and small write-ups. Placeholder state until real notes land.
+          </p>
+        </div>
 
-        <div className="flex flex-col divide-y divide-line">
-          {notesData.map((note) => (
-            <article
-              key={note.title}
-              className="group py-6 first:pt-0 last:pb-0 cursor-default"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 sm:gap-6 mb-1.5">
-                <h3 className="text-base font-semibold text-ink leading-snug group-hover:text-accent-text dark:group-hover:text-accent-dark transition-colors">
-                  {note.title}
-                </h3>
-                <div className="flex items-center gap-3 shrink-0">
-                  <span className="font-mono text-[11px] text-ink-soft border border-line px-2 py-0.5 rounded-sm">
-                    {note.tag}
-                  </span>
-                  <span className="font-mono text-[11px] text-ink-soft">
-                    {note.readTime}
-                  </span>
-                </div>
+        <div className="rounded-3xl border border-line bg-paper-raised/60 p-6 md:p-8">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <div className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-soft">00</div>
+                <div className="font-display text-2xl font-semibold text-ink mt-2">Add your first note</div>
               </div>
-              <p className="text-sm text-ink-soft leading-relaxed max-w-[62ch]">
-                {note.summary}
-              </p>
-              <span className="font-mono text-[11px] text-ink-soft mt-2 block">
-                {note.date}
-              </span>
-            </article>
-          ))}
+              <div className="text-right">
+                <div className="font-mono text-[10px] text-ink-soft/70">TBD</div>
+                <div className="font-mono text-[10px] text-ink-soft/60 mt-1">Read time</div>
+              </div>
+            </div>
+            <p className="text-sm text-ink-soft leading-relaxed max-w-[70ch]">
+              Keep it engineering-first: what broke, what changed, what you learned. No hype. No templates.
+            </p>
+          </div>
         </div>
       </Container>
     </section>

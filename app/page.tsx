@@ -6,6 +6,7 @@ import { Interests } from "@/components/sections/interests";
 import { About } from "@/components/sections/about";
 import { Notes } from "@/components/sections/notes";
 import { Footer } from "@/components/sections/footer";
+import { Achievements } from "@/components/sections/achievements";
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
         <Currently />
         <Projects />
         <Interests />
+        <Achievements />
         <About />
         <Notes />
       </main>

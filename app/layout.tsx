@@ -3,26 +3,27 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import { caveat, geistMono, geistSans } from "@/lib/fonts";
-import { siteConfig } from "@/content/site";
+import { caveat, fraunces, geistMono, geistSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.bioIntro,
+  title: "Vedant Deshpande — Engineering & AI",
+  description:
+    "Full-stack and AI systems engineer. I build, ship, and debug software end-to-end — from web applications to self-hosted infrastructure.",
   robots: { index: true, follow: true },
-  metadataBase: new URL("https://example.com"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://vedantd.in"),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.bioIntro,
+    title: "Vedant Deshpande — Engineering & AI",
+    description:
+      "Full-stack and AI systems engineer. I build, ship, and debug software end-to-end — from web applications to self-hosted infrastructure.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: siteConfig.title,
-    description: siteConfig.bioIntro,
+    title: "Vedant Deshpande — Engineering & AI",
+    description:
+      "Full-stack and AI systems engineer. I build, ship, and debug software end-to-end.",
   },
 };
 
@@ -32,13 +33,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable}`}
+      className={cn(
+        geistSans.variable,
+        geistMono.variable,
+        caveat.variable,
+        fraunces.variable
+      )}
       suppressHydrationWarning
     >
-      <body className="min-h-[100dvh] bg-paper text-ink">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+      <body className="min-h-[100dvh] bg-paper text-ink antialiased">
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

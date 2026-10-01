@@ -44,7 +44,7 @@ The website should feel like a personal engineering studio rather than:
 - a personal-brand marketing site
 - a “look how much technology I know” website
 
-The work should speak for itself.
+The work should speak for itself. It should have **presence without being loud** — visually confident, editorial, and carefully crafted.
 
 ---
 
@@ -52,19 +52,19 @@ The work should speak for itself.
 
 The personality of the site should be:
 
-**Quiet, calm, warm, curious, technical, precise, playful, and confident.**
+**Quietly confident, warm, technical, precise, expressive, and carefully crafted.**
 
-The website should never feel loud, aggressive, overly polished, corporate, or performative.
+The website should never feel loud, aggressive, noisy, corporate, or performative, **but it should not be dull or timid either**.
 
 The desired emotional reaction is approximately:
 
-> “This feels calm and thoughtfully made.”
+> “This feels like a well-lit workshop with unmistakably good craft.”
 
 followed by:
 
 > “This person clearly enjoys building things.”
 
-The site should feel human without becoming overly personal or sentimental.
+The site bridges editorial warmth and engineering structure.
 
 ---
 
@@ -173,6 +173,8 @@ Typography:
 ### Display / personality
 
 Caveat
+
+Used prominently in identity moments: hero display name, footer signature, annotations.
 
 ### Primary interface/body
 

@@ -1,25 +1,22 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "cn";
 
 interface SectionHeaderProps {
   label: string;
-  index?: string;
+  heading?: string;
   className?: string;
 }
 
-export function SectionHeader({ label, index, className }: SectionHeaderProps) {
+export function SectionHeader({ label, heading, className }: SectionHeaderProps) {
   return (
-    <div
-      className={cn(
-        "flex items-center justify-between pb-3 mb-10 border-b border-line text-ink-soft text-xs tracking-wider uppercase font-mono select-none",
-        className
+    <div className={cn("mb-10 pb-6 border-b border-line", className)}>
+      <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold block mb-2">
+        {label}
+      </span>
+      {heading && (
+        <h2 className="text-2xl md:text-3xl font-semibold text-ink tracking-tight leading-none">
+          {heading}
+        </h2>
       )}
-    >
-      <div className="flex items-center gap-2">
-        {index && <span className="text-accent dark:text-accent-dark font-medium">{index}</span>}
-        <span>{label}</span>
-      </div>
-      <div className="w-1.5 h-1.5 bg-line-strong" />
     </div>
   );
 }
