@@ -12,7 +12,7 @@ export function VisualObject() {
           src="/images/profile-pic.png"
           alt="Vedant Deshpande"
           fill
-          className="object-cover object-top"
+          className="object-cover object-[center_80%]"
           priority
           sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 288px"
         />
