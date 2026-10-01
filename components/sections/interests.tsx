@@ -15,57 +15,46 @@ const dotTextTone = {
 
 export function Interests() {
   return (
-    <section
-      id="expertise"
-      className="py-20 md:py-32 bg-paper-warm/50 border-y border-line"
-    >
+    <section id="expertise" className="py-20 md:py-32 bg-paper-warm/50 border-y border-line">
       <Container>
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-12">
-          <div>
-            <p className="font-script text-3xl text-accent-text dark:text-accent-dark rotate-1 mb-2">
-              what i work with
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight">
-              Expertise
-            </h2>
-          </div>
-          <p className="text-sm text-ink-soft max-w-[34ch] md:text-right leading-relaxed">
-            A practical toolkit built across products, models, servers, and circuits.
+        <div className="mb-12 max-w-2xl">
+          <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold mb-3">
+            Expertise
           </p>
+          <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight">
+              What I work with
+            </h2>
+            <span className="font-script text-2xl text-accent-text dark:text-accent-dark -rotate-2">
+              always learning more ↗
+            </span>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
           {expertiseData.map((area, index) => {
             const dot = dotTone[area.tone];
             const toneText = dotTextTone[area.tone];
 
             return (
-              <article
-                key={area.domain}
-                className={`group rounded-2xl border border-line bg-paper-raised/70 p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft ${index === 0 ? "md:col-span-2 md:flex md:items-center md:justify-between md:gap-10" : ""}`}
-              >
-                <div className={index === 0 ? "md:max-w-[34ch]" : ""}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span
-                      className={`w-2.5 h-2.5 rounded-full ${dot}`}
-                      aria-hidden="true"
-                    />
-                    <h3 className="font-display text-2xl font-semibold text-ink leading-tight">
+              <article key={area.domain} className="group">
+                <div className="flex items-center justify-between gap-4 pb-3 border-b border-line">
+                  <div className="flex items-center gap-2.5">
+                    <span className={`w-2 h-2 rounded-full ${dot}`} aria-hidden="true" />
+                    <h3 className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-soft font-semibold">
                       {area.domain}
                     </h3>
-                    <span className={`font-mono text-[10px] ml-auto ${toneText}`}>0{index + 1}</span>
                   </div>
-                  <p className="text-sm text-ink-soft leading-relaxed">
-                    {area.summary}
-                  </p>
+                  <span className={`font-mono text-[10px] ${toneText}`}>0{index + 1}</span>
                 </div>
-                <div
-                  className={`flex flex-wrap gap-1.5 mt-5 ${index === 0 ? "md:mt-0 md:max-w-[52%] md:justify-end" : ""}`}
-                >
+                <p className="text-sm text-ink-soft leading-relaxed mt-4 max-w-[42ch]">
+                  {area.summary}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
                   {area.topics.map((topic) => (
                     <span
                       key={topic}
-                      className="px-2.5 py-1 rounded-pill bg-paper border border-line text-[10px] font-mono text-ink-soft group-hover:border-line-strong transition-colors"
+                      className="px-3 py-1.5 rounded-pill bg-paper-raised border border-line text-xs text-ink-soft hover:border-line-strong hover:text-ink transition-colors"
                     >
                       {topic}
                     </span>

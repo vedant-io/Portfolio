@@ -77,7 +77,7 @@ export const projectsData: Project[] = [
       "A real-time messaging application built with React, Node.js, Express, MongoDB, and Socket.IO, with selective message delivery, secure authentication, and containerized deployment.",
     tags: ["React", "Node.js", "Socket.IO", "Docker"],
     year: "2025",
-    status: "Built",
+    status: "Live",
     live: "https://chatter.vedantd.in",
     metric: "∼85% less broadcast overhead",
     tone: "coral",
@@ -86,9 +86,40 @@ export const projectsData: Project[] = [
 
 export const expertiseData: ExpertiseArea[] = [
   {
-    domain: "Product engineering",
-    summary:
-      "Building full-stack applications from the frontend through APIs and deployment.",
+    domain: "Technical foundations",
+    summary: "Core tools and concepts I use to reason through unfamiliar systems.",
+    topics: [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "C++",
+      "SQL",
+      "Data structures",
+      "DBMS",
+      "Networking",
+      "Operating systems",
+    ],
+    tone: "sage",
+  },
+  {
+    domain: "AI & data",
+    summary: "Retrieval, orchestration, and structured data for useful AI systems.",
+    topics: [
+      "RAG",
+      "GraphRAG",
+      "FAISS",
+      "BM25",
+      "LangChain",
+      "LLM orchestration",
+      "MongoDB",
+      "PostgreSQL",
+      "Neo4j",
+    ],
+    tone: "coral",
+  },
+  {
+    domain: "Products & APIs",
+    summary: "Shipping complete products from interface through API and deployment.",
     topics: [
       "React",
       "Next.js",
@@ -96,20 +127,14 @@ export const expertiseData: ExpertiseArea[] = [
       "Express.js",
       "FastAPI",
       "REST APIs",
+      "WebSockets",
+      "Zustand",
     ],
     tone: "sage",
   },
   {
-    domain: "AI systems",
-    summary:
-      "Working with retrieval, LLM orchestration, and the pieces that make AI systems more useful.",
-    topics: ["RAG", "FAISS", "BM25", "LangChain", "Gemini API", "OpenAI API"],
-    tone: "coral",
-  },
-  {
-    domain: "Infrastructure",
-    summary:
-      "Running and debugging systems with Docker, Linux, routing, monitoring, and CI/CD.",
+    domain: "Infrastructure & hardware",
+    summary: "Running software reliably and connecting it to physical systems.",
     topics: [
       "Docker",
       "Linux",
@@ -117,29 +142,11 @@ export const expertiseData: ExpertiseArea[] = [
       "Cloudflare Tunnels",
       "Prometheus",
       "Grafana",
+      "Arduino",
+      "ESP32",
+      "Embedded systems",
     ],
     tone: "butter",
-  },
-  {
-    domain: "Foundations",
-    summary:
-      "The core concepts I use to reason about systems and work through unfamiliar problems.",
-    topics: [
-      "Python",
-      "TypeScript",
-      "C++",
-      "SQL",
-      "Data Structures",
-      "Operating Systems",
-    ],
-    tone: "sage",
-  },
-  {
-    domain: "Hardware experiments",
-    summary:
-      "Building software that connects to real hardware and validating it on embedded platforms.",
-    topics: ["Arduino", "ESP32", "Embedded systems", "Electronics"],
-    tone: "coral",
   },
 ];
 
