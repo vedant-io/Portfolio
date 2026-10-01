@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #F7F6F2;
+  --color-paper-raised: #FCFBF8;
+  --color-ink: #171816;
+  --color-ink-soft: #4E504B;
+  --color-line: #DFDED8;
+  --color-line-strong: #C9C8C0;
+  --color-accent: #547A63;
+  --color-accent-text: #496B56;
+  --color-accent-dark: #8FB59A;
+  --color-on-accent: #F7F6F2;
+
+  --font-sans: var(--font-geist-sans), Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, monospace;
+  --font-display: var(--font-caveat), cursive, Georgia, serif;
+}
+
+.dark {
+  --color-paper: #111211;
+  --color-paper-raised: #171917;
+  --color-ink: #F7F6F2;
+  --color-ink-soft: #A2A39C;
+  --color-line: #2C2E2B;
+  --color-line-strong: #3D403A;
+  --color-accent: #547A63;
+  --color-accent-text: #8FB59A;
+  --color-accent-dark: #8FB59A;
+  --color-on-accent: #111211;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: #547A63;
+  color: #F7F6F2;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
