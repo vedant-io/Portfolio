@@ -13,7 +13,7 @@ export interface Project {
 }
 
 export interface CurrentlyItem {
-  category: "Building" | "Exploring" | "Learning";
+  category: "Building" | "Working with" | "Going deeper into";
   title: string;
   detail: string;
 }

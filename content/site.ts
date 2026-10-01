@@ -11,14 +11,15 @@ export const siteConfig = {
   name: "Vedant Deshpande",
   shortName: "Vedant",
   title: "Vedant Deshpande — Engineering & AI",
-  role: "Engineer · Builder · Recent graduate",
-  location: "Navi Mumbai, India",
-  status: "Available for interesting problems",
-  bioHeadline: "I build software that understands what is happening underneath.",
+  role: "Electronics & Telecommunication Engineer · AI/ML",
+  location: "Airoli, Navi Mumbai, India",
+  status: "Building, learning, and figuring things out",
+  bioHeadline:
+    "I like building things and understanding what happens underneath.",
   bioIntro:
-    "Recent Electronics & Telecommunication Engineering graduate with an Honours in AI/ML. I build, ship, and debug full-stack products, AI systems, infrastructure, and hardware experiments.",
+    "Electronics & Telecommunication Engineer (2026) with an Honours in AI/ML. I build, ship, and run full-stack and AI systems end-to-end.",
   bioPhilosophy:
-    "I like tracing systems back to their roots. When something is slow or broken, I want to understand why before reaching for a workaround.",
+    "I like tracing slow or broken systems back to the root cause instead of settling for a workaround.",
   email: "vedantd004@gmail.com",
   github: "https://github.com/vedant-io",
   linkedin: "https://linkedin.com/in/vedantsd",
@@ -27,21 +28,21 @@ export const siteConfig = {
 export const currentlyData: CurrentlyItem[] = [
   {
     category: "Building",
-    title: "Things that run outside my laptop",
+    title: "Homelab Server Infrastructure",
     detail:
-      "Growing a self-hosted Linux setup with containers, monitoring, secure tunnels, and plenty of small failures to learn from.",
+      "Maintaining a self-hosted Linux setup with 10+ containerized workloads, isolated Docker networks, secure routing, monitoring, and automated restarts.",
   },
   {
-    category: "Exploring",
-    title: "AI systems with useful internals",
+    category: "Working with",
+    title: "AI systems",
     detail:
-      "Experimenting with retrieval, agents, GraphRAG, and ways to make language models more grounded and less mysterious.",
+      "Building systems around RAG, LLM orchestration, retrieval, and agentic workflows, with a focus on making them useful in real applications.",
   },
   {
-    category: "Learning",
-    title: "How systems hold together",
+    category: "Going deeper into",
+    title: "Systems and infrastructure",
     detail:
-      "Going deeper into performance, distributed architecture, networking, and the boundary between software and hardware.",
+      "Spending more time understanding performance, networking, Docker, Linux, databases, and what happens when real systems start breaking.",
   },
 ];
 
@@ -50,7 +51,7 @@ export const projectsData: Project[] = [
     number: "01",
     title: "EmbedAI Learn",
     description:
-      "An AI-powered embedded systems learning platform that takes projects from a question to hardware validation on Arduino and ESP32.",
+      "A full-stack AI-powered embedded systems platform that combines retrieval and agentic workflows with real-time hardware validation for Arduino and ESP32.",
     tags: ["Next.js", "FastAPI", "RAG", "MongoDB"],
     year: "2026",
     status: "Live",
@@ -60,24 +61,25 @@ export const projectsData: Project[] = [
   },
   {
     number: "02",
-    title: "Homelab Infrastructure",
+    title: "Homelab Server Infrastructure",
     description:
-      "A self-hosted Linux environment running 10+ containerized workloads with secure routing, monitoring, automated restarts, and no exposed host ports.",
+      "A self-hosted Linux infrastructure running 10+ containerized workloads with Docker, secure routing through Traefik and Cloudflare Tunnels, and monitoring across the system.",
     tags: ["Docker", "Linux", "Traefik", "Prometheus"],
     year: "2026 — now",
     status: "Running",
-    metric: "10+ workloads, self-hosted",
+    metric: "10+ containerized workloads",
     tone: "butter",
   },
   {
     number: "03",
     title: "Chatter",
     description:
-      "A real-time messaging application built around selective delivery, live presence, secure sessions, and a containerized production edge.",
+      "A real-time messaging application built with React, Node.js, Express, MongoDB, and Socket.IO, with selective message delivery, secure authentication, and containerized deployment.",
     tags: ["React", "Node.js", "Socket.IO", "Docker"],
     year: "2025",
     status: "Built",
-    metric: "~85% less broadcast overhead",
+    live: "https://chatter.vedantd.in",
+    metric: "∼85% less broadcast overhead",
     tone: "coral",
   },
 ];
@@ -85,32 +87,58 @@ export const projectsData: Project[] = [
 export const expertiseData: ExpertiseArea[] = [
   {
     domain: "Product engineering",
-    summary: "Building complete products from interface to API and deployment.",
-    topics: ["React", "Next.js", "Node.js", "Express.js", "FastAPI", "REST APIs"],
+    summary:
+      "Building full-stack applications from the frontend through APIs and deployment.",
+    topics: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "REST APIs",
+    ],
     tone: "sage",
   },
   {
     domain: "AI systems",
-    summary: "Making models more useful through retrieval, structure, and evaluation.",
-    topics: ["RAG", "GraphRAG", "FAISS", "BM25", "LangChain", "LLM orchestration"],
+    summary:
+      "Working with retrieval, LLM orchestration, and the pieces that make AI systems more useful.",
+    topics: ["RAG", "FAISS", "BM25", "LangChain", "Gemini API", "OpenAI API"],
     tone: "coral",
   },
   {
     domain: "Infrastructure",
-    summary: "Running software reliably, securely, and close to the metal.",
-    topics: ["Docker", "Linux", "Traefik", "Cloudflare Tunnels", "Prometheus", "Grafana"],
+    summary:
+      "Running and debugging systems with Docker, Linux, routing, monitoring, and CI/CD.",
+    topics: [
+      "Docker",
+      "Linux",
+      "Traefik",
+      "Cloudflare Tunnels",
+      "Prometheus",
+      "Grafana",
+    ],
     tone: "butter",
   },
   {
     domain: "Foundations",
-    summary: "The fundamentals I use to reason through unfamiliar systems.",
-    topics: ["Python", "TypeScript", "C++", "SQL", "Databases", "Networking", "Operating systems"],
+    summary:
+      "The core concepts I use to reason about systems and work through unfamiliar problems.",
+    topics: [
+      "Python",
+      "TypeScript",
+      "C++",
+      "SQL",
+      "Data Structures",
+      "Operating Systems",
+    ],
     tone: "sage",
   },
   {
     domain: "Hardware experiments",
-    summary: "Connecting code to physical systems and figuring out why they behave strangely.",
-    topics: ["Arduino", "ESP32", "Embedded validation", "Electronics"],
+    summary:
+      "Building software that connects to real hardware and validating it on embedded platforms.",
+    topics: ["Arduino", "ESP32", "Embedded systems", "Electronics"],
     tone: "coral",
   },
 ];
@@ -118,13 +146,15 @@ export const expertiseData: ExpertiseArea[] = [
 export const achievementsData: Achievement[] = [
   {
     title: "Winner · Cognition ’25",
-    detail: "For EmbedAI Learn, an AI-powered embedded systems learning platform.",
+    detail:
+      "Recognized for developing EmbedAI Learn, an AI-powered embedded systems learning platform.",
     year: "2025",
     tone: "sage",
   },
   {
     title: "Finalist · Bytecamp ’26",
-    detail: "GenAI track finalist with GraphRAG-Atlas, a code intelligence platform.",
+    detail:
+      "Finalist in the GenAI track with GraphRAG-Atlas, an AI-powered code intelligence platform.",
     year: "2026",
     tone: "coral",
   },
@@ -135,5 +165,9 @@ export const notesData: NoteEntry[] = [];
 export const socialLinks: SocialLink[] = [
   { label: "GitHub", href: siteConfig.github, handle: "@vedant-io" },
   { label: "LinkedIn", href: siteConfig.linkedin, handle: "vedantsd" },
-  { label: "Email", href: `mailto:${siteConfig.email}`, handle: siteConfig.email },
+  {
+    label: "Email",
+    href: `mailto:${siteConfig.email}`,
+    handle: siteConfig.email,
+  },
 ];

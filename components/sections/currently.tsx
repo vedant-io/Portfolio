@@ -3,15 +3,15 @@ import { currentlyData, siteConfig } from "@/content/site";
 import { ArrowUpRight } from "lucide-react";
 
 const categoryStyles = {
-  Building: {
+  "Building": {
     card: "bg-accent/8 border-accent/15",
     dot: "bg-accent",
   },
-  Exploring: {
+  "Working with": {
     card: "bg-accent/5 border-accent/10",
     dot: "bg-accent-text",
   },
-  Learning: {
+  "Going deeper into": {
     card: "bg-paper-raised border-line",
     dot: "bg-ink-soft",
   },
