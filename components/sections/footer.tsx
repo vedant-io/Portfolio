@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container";
+import { Reveal } from "@/components/ui/reveal";
 import { socialLinks, siteConfig } from "@/content/site";
 import { ArrowUpRight } from "lucide-react";
 
@@ -7,7 +8,7 @@ export function Footer() {
     <footer id="contact" className="py-20 md:py-28 bg-paper-raised border-t border-line">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
-          <div className="md:col-span-7 flex flex-col gap-5">
+          <Reveal className="md:col-span-7 flex flex-col gap-5">
             <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight">
               Let&apos;s connect.
             </h2>
@@ -43,9 +44,9 @@ export function Footer() {
                 </span>
               </span>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="md:col-span-5 flex flex-col justify-end md:items-end gap-2">
+          <Reveal delayIndex={1} className="md:col-span-5 flex flex-col justify-end md:items-end gap-2">
             <div className="font-script text-3xl text-accent-text dark:text-accent-dark -rotate-2">
               {siteConfig.shortName}
             </div>
@@ -55,7 +56,7 @@ export function Footer() {
             <div className="font-mono text-[10px] text-ink-soft/60">
               Next.js · TypeScript · Tailwind · shadcn · motion
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </footer>

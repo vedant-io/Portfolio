@@ -1,23 +1,15 @@
 import { Container } from "@/components/ui/container";
+import { Reveal } from "@/components/ui/reveal";
 import { expertiseData } from "@/content/site";
-
-const dotTone = {
-  sage: "bg-accent",
-  coral: "bg-accent-dark",
-  butter: "bg-ink-soft",
-} as const;
-
-const dotTextTone = {
-  sage: "text-accent-text dark:text-accent-dark",
-  coral: "text-accent-dark",
-  butter: "text-ink-soft",
-} as const;
 
 export function Interests() {
   return (
-    <section id="expertise" className="py-20 md:py-32 bg-paper-warm/50 border-y border-line">
+    <section
+      id="expertise"
+      className="py-20 md:py-32 bg-paper-warm/50 border-y border-line"
+    >
       <Container>
-        <div className="mb-12 max-w-2xl">
+        <Reveal className="mb-12 max-w-2xl">
           <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold mb-3">
             Expertise
           </p>
@@ -29,23 +21,25 @@ export function Interests() {
               always learning more ↗
             </span>
           </div>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-          {expertiseData.map((area, index) => {
-            const dot = dotTone[area.tone];
-            const toneText = dotTextTone[area.tone];
-
-            return (
-              <article key={area.domain} className="group">
+          {expertiseData.map((area, index) => (
+            <Reveal key={area.domain} delayIndex={index}>
+              <article className="group">
                 <div className="flex items-center justify-between gap-4 pb-3 border-b border-line">
                   <div className="flex items-center gap-2.5">
-                    <span className={`w-2 h-2 rounded-full ${dot}`} aria-hidden="true" />
+                    <span
+                      className="w-2 h-2 rounded-full bg-accent"
+                      aria-hidden="true"
+                    />
                     <h3 className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-soft font-semibold">
                       {area.domain}
                     </h3>
                   </div>
-                  <span className={`font-mono text-[10px] ${toneText}`}>0{index + 1}</span>
+                  <span className="font-mono text-[10px] text-accent-text dark:text-accent-dark">
+                    0{index + 1}
+                  </span>
                 </div>
                 <p className="text-sm text-ink-soft leading-relaxed mt-4 max-w-[42ch]">
                   {area.summary}
@@ -61,8 +55,8 @@ export function Interests() {
                   ))}
                 </div>
               </article>
-            );
-          })}
+            </Reveal>
+          ))}
         </div>
       </Container>
     </section>

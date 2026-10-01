@@ -1,11 +1,12 @@
 import { Container } from "@/components/ui/container";
+import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/content/site";
 
 export function About() {
   return (
     <section id="about" className="py-20 md:py-28 border-b border-line">
       <Container>
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+        <Reveal className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold">
               About
@@ -17,9 +18,9 @@ export function About() {
           <p className="text-sm text-ink-soft max-w-[38ch] lg:text-right leading-relaxed">
             I like tracing systems back to their roots. When something is slow or broken, I go past the workaround.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="max-w-[720px]">
+        <Reveal delayIndex={1} className="max-w-[720px]">
           <div className="rounded-2xl border border-line bg-paper-raised/70 p-6 md:p-8">
             <div className="flex flex-col gap-5">
               <p className="text-base md:text-lg text-ink leading-relaxed">
@@ -40,7 +41,7 @@ export function About() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -36,7 +36,11 @@ export function Hero() {
             <motion.div {...reveal(0, reduce)}>
               <span className="inline-flex items-center gap-2 text-xs font-mono font-medium text-accent-text dark:text-accent-dark bg-accent/10 border border-accent/20 px-3 py-1.5 rounded-pill">
                 <span
-                  className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
+                  className={
+                    reduce
+                      ? "w-1.5 h-1.5 rounded-full bg-accent"
+                      : "w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
+                  }
                   aria-hidden="true"
                 />
                 {siteConfig.status}
