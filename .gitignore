@@ -23,3 +23,11 @@ npm-debug.log*
 next-env.d.ts
 
 .playwright-mcp/
+
+# local tooling and generated review artifacts
+.impeccable/
+.serena/
+portfolio-knowledge/
+TODO.md
+PLAN_portfolio_redesign_2026-10-11.md
+HANDOFF_portfolio_redesign_2026-10-11.md
