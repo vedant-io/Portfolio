@@ -16,7 +16,7 @@ export function Projects() {
           </h2>
         </div>
 
-        {/* Card grid — items-start prevents sibling cards from stretching into empty boxes */}
+        {/* Card grid - items-start prevents sibling cards from stretching into empty boxes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {projectsData.map((project) => (
             <ProjectCard key={project.number} project={project} />
