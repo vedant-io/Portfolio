@@ -37,13 +37,21 @@ export function Hero() {
               </span>
             </motion.div>
 
-            <motion.div {...heroReveal(1, reduce)} className="flex flex-col gap-1">
-              <p className="text-base text-ink-soft font-medium">hey, i&apos;m</p>
+            <motion.div
+              {...heroReveal(1, reduce)}
+              className="flex flex-col gap-0.5"
+            >
+              <p className="text-base text-ink-soft font-medium">
+                hey, i&apos;m
+              </p>
               <h1 className="font-script text-6xl sm:text-7xl md:text-8xl font-bold text-ink leading-[0.9] tracking-tight">
                 Vedant
               </h1>
-              <p className="font-sans font-light text-2xl sm:text-3xl md:text-4xl italic text-ink-soft leading-snug -mt-1">
+              <p className="font-sans font-light text-2xl sm:text-3xl md:text-4xl italic font-bold text-ink-soft leading-snug -mt-1">
                 {siteConfig.role}
+              </p>
+              <p className="text-sm text-ink-soft font-mono">
+                B.E. in Electronics and Telecommunication · Honours in AI & ML
               </p>
             </motion.div>
 

@@ -60,19 +60,11 @@ function DockNavLink({
   );
   const y = useSpring(yTransform, SPRING_CONFIG);
 
-  if (reduceMotion) {
-    return (
-      <Link
-        href={href}
-        className="px-3 py-1.5 rounded-pill text-ink-soft hover:text-ink hover:bg-line/60 transition-colors text-sm font-medium focus-visible:outline-2 focus-visible:outline-accent active:scale-[0.98]"
-      >
-        {label}
-      </Link>
-    );
-  }
-
   return (
-    <motion.div style={{ scale, y }} className="origin-center">
+    <motion.div
+      style={reduceMotion ? undefined : { scale, y }}
+      className="origin-center"
+    >
       <Link
         ref={itemRef}
         href={href}

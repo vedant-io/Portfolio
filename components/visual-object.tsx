@@ -1,9 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useReducedMotion } from "motion/react";
-
 export function VisualObject() {
-  const reduce = useReducedMotion();
 
   return (
     <div
@@ -24,11 +21,7 @@ export function VisualObject() {
       </div>
 
       <span
-        className={
-          reduce
-            ? "absolute bottom-4 right-4 w-4 h-4 rounded-full bg-accent border-2 border-paper"
-            : "absolute bottom-4 right-4 w-4 h-4 rounded-full bg-accent border-2 border-paper shadow-sm animate-pulse"
-        }
+        className="absolute bottom-4 right-4 w-4 h-4 rounded-full bg-accent border-2 border-paper shadow-sm animate-pulse motion-reduce:animate-none"
         aria-hidden="true"
       />
 

@@ -11,13 +11,13 @@ export const siteConfig = {
   name: "Vedant Deshpande",
   shortName: "Vedant",
   title: "Vedant Deshpande · Engineering & AI",
-  role: "Electronics & Telecommunication Engineer · AI/ML",
+  role: "Aspiring Software engineer",
   location: "Airoli, Navi Mumbai, India",
   status: "Building, learning, and figuring things out",
   bioHeadline:
     "I like building things and understanding what happens underneath.",
   bioIntro:
-    "Electronics & Telecommunication Engineer (2026) with an Honours in AI/ML. I build, ship, and run full-stack and AI systems end-to-end.",
+    "I build software, explore systems, and learn by taking things apart.",
   bioPhilosophy:
     "I like tracing slow or broken systems back to the root cause instead of settling for a workaround.",
   email: "vedantd004@gmail.com",
@@ -28,24 +28,23 @@ export const siteConfig = {
 export const currentlyData: CurrentlyItem[] = [
   {
     category: "Building",
-    title: "Homelab Server Infrastructure",
+    title: "The server this site runs on",
     detail:
-      "Maintaining a self-hosted Linux setup with 10+ containerized workloads, isolated Docker networks, secure routing, monitoring, and automated restarts.",
+      "This portfolio is self-hosted on my own homelab: 20+ containerized services on Ubuntu, with Docker, Traefik, Cloudflare tunnels, RAID 1, and automated backups with alerting.",
   },
   {
     category: "Working with",
-    title: "AI systems",
+    title: "RAG and LLM systems",
     detail:
-      "Building systems around RAG, LLM orchestration, retrieval, and agentic workflows, with a focus on making them useful in real applications.",
+      "Retrieval pipelines, LLM orchestration, and agent workflows, tuned for accuracy and speed in apps people actually use.",
   },
   {
     category: "Going deeper into",
-    title: "Systems and infrastructure",
+    title: "Why systems break",
     detail:
-      "Spending more time understanding performance, networking, Docker, Linux, databases, and what happens when real systems start breaking.",
+      "Performance, networking, and databases: how real systems fail under load, and how to find the cause fast.",
   },
 ];
-
 export const projectsData: Project[] = [
   {
     number: "01",
@@ -70,8 +69,8 @@ export const projectsData: Project[] = [
       "I built Atlas because naive RAG on codebases always felt incomplete - splitting code into text chunks completely misses how code actually works. Building this taught me how GraphRAG functions under the hood: how entities turn into nodes, how dependencies become edges, and how graph structure gives an LLM real architectural context. It also gave me a way to finally see polyglot projects as one connected system instead of isolated frontend and backend silos. Going from that initial learning goal to a tool with 3D/2D visual mapping, blast-radius checks, and automated code edits made the entire concept click.",
     tags: ["GraphRAG", "Neo4j", "React", "Python"],
     year: "2026",
-    status: "In progress",
-    github: "https://github.com/vedant-io/graphrag-atlas",
+    status: "Live",
+    live: "https://atlas.vedantd.in",
     tone: "coral",
   },
   {
@@ -104,7 +103,8 @@ export const projectsData: Project[] = [
 export const expertiseData: ExpertiseArea[] = [
   {
     domain: "Technical foundations",
-    summary: "Core tools and concepts I use to reason through unfamiliar systems.",
+    summary:
+      "Core tools and concepts I use to reason through unfamiliar systems.",
     topics: [
       "Python",
       "TypeScript",
@@ -120,7 +120,8 @@ export const expertiseData: ExpertiseArea[] = [
   },
   {
     domain: "AI & data",
-    summary: "Retrieval, orchestration, and structured data for useful AI systems.",
+    summary:
+      "Retrieval, orchestration, and structured data for useful AI systems.",
     topics: [
       "RAG",
       "GraphRAG",
@@ -136,7 +137,8 @@ export const expertiseData: ExpertiseArea[] = [
   },
   {
     domain: "Products & APIs",
-    summary: "Shipping complete products from interface through API and deployment.",
+    summary:
+      "Shipping complete products from interface through API and deployment.",
     topics: [
       "React",
       "Next.js",
