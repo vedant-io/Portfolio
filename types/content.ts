@@ -2,6 +2,7 @@ export interface Project {
   number: string;
   title: string;
   description: string;
+  story: string;
   tags: string[];
   year: string;
   status?: string;

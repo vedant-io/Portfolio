@@ -10,7 +10,7 @@ import {
 export const siteConfig = {
   name: "Vedant Deshpande",
   shortName: "Vedant",
-  title: "Vedant Deshpande — Engineering & AI",
+  title: "Vedant Deshpande · Engineering & AI",
   role: "Electronics & Telecommunication Engineer · AI/ML",
   location: "Airoli, Navi Mumbai, India",
   status: "Building, learning, and figuring things out",
@@ -49,9 +49,11 @@ export const currentlyData: CurrentlyItem[] = [
 export const projectsData: Project[] = [
   {
     number: "01",
-    title: "EmbedAI Learn",
+    title: "Electronics.LLM",
     description:
-      "A full-stack AI-powered embedded systems platform that combines retrieval and agentic workflows with real-time hardware validation for Arduino and ESP32.",
+      "Built to make Arduino and ESP32 learning less about copy-pasting code and more about understanding why it works — with guided modules, quizzes, and project-specific generation.",
+    story:
+      "I built this to learn RAG and agentic AI pipelines while helping electronics students who typically copy-paste Arduino/ESP32 code without understanding it. The platform uses AI agents with retrieval-augmented generation to enforce a structured learning path — interactive modules, quiz gates, then project-tailored code and wiring generation — replacing blind copy-paste with guided, verified understanding. Guides get a live dashboard to track student progress and intervene early.",
     tags: ["Next.js", "FastAPI", "RAG", "MongoDB"],
     year: "2026",
     status: "Live",
@@ -61,26 +63,41 @@ export const projectsData: Project[] = [
   },
   {
     number: "02",
-    title: "Homelab Server Infrastructure",
+    title: "Atlas",
     description:
-      "A self-hosted Linux infrastructure running 10+ containerized workloads with Docker, secure routing through Traefik and Cloudflare Tunnels, and monitoring across the system.",
-    tags: ["Docker", "Linux", "Traefik", "Prometheus"],
-    year: "2026 — now",
-    status: "Running",
-    metric: "10+ containerized workloads",
-    tone: "butter",
+      "Built to see codebases as connected systems instead of isolated files — turning dependencies into a map for architectural context, analysis, and edits.",
+    story:
+      "I built Atlas because naive RAG on codebases always felt incomplete — splitting code into text chunks completely misses how code actually works. Building this taught me how GraphRAG functions under the hood: how entities turn into nodes, how dependencies become edges, and how graph structure gives an LLM real architectural context. It also gave me a way to finally see polyglot projects as one connected system instead of isolated frontend and backend silos. Going from that initial learning goal to a tool with 3D/2D visual mapping, blast-radius checks, and automated code edits made the entire concept click.",
+    tags: ["GraphRAG", "Neo4j", "React", "Python"],
+    year: "2026",
+    status: "In progress",
+    github: "https://github.com/vedant-io/graphrag-atlas",
+    tone: "coral",
   },
   {
     number: "03",
     title: "Chatter",
     description:
-      "A real-time messaging application built with React, Node.js, Express, MongoDB, and Socket.IO, with selective message delivery, secure authentication, and containerized deployment.",
+      "Built to get hands-on with WebSockets and full-stack state — a lightweight chat app with real-time messaging, online presence, and photo sharing.",
+    story:
+      "I built Chatter to get hands-on experience with WebSockets, full-stack state management, and containerization. It's a 1-to-1 chat app where users can message each other in real time, see who is online, and share photos without lag or heavy database bloat. I also containerized the entire project with multi-stage Docker builds and Nginx to keep deployment lightweight and fast.",
     tags: ["React", "Node.js", "Socket.IO", "Docker"],
     year: "2025",
     status: "Live",
     live: "https://chatter.vedantd.in",
-    metric: "∼85% less broadcast overhead",
-    tone: "coral",
+    tone: "sage",
+  },
+  {
+    number: "04",
+    title: "Homelab",
+    description:
+      "Self-hosted Linux infrastructure running 10+ containerized workloads with monitoring and secure routing.",
+    story:
+      "I built this whole homelab setup to understand how to deploy projects and manage them while monitoring them at the same time. Wanted to learn Docker, reverse proxies, and managing multiple services even on a fairly low-end system. Runs 10+ containerized workloads with Traefik, Cloudflare Tunnels, and Prometheus.",
+    tags: ["Docker", "Linux", "Traefik", "Prometheus"],
+    year: "2026",
+    status: "Running",
+    tone: "butter",
   },
 ];
 
