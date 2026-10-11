@@ -8,6 +8,8 @@ import {
   useSpring,
   useTransform,
   useReducedMotion,
+  useScroll,
+  useMotionValueEvent,
   type MotionValue,
 } from "motion/react";
 import { Container } from "@/components/ui/container";
@@ -21,7 +23,7 @@ const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
-const SPRING_CONFIG = { mass: 0.1, stiffness: 180, damping: 14 };
+const SPRING_CONFIG = { mass: 0.1, stiffness: 240, damping: 18 };
 const MAGNIFY_DISTANCE = 110;
 
 function DockNavLink({
@@ -62,7 +64,7 @@ function DockNavLink({
     return (
       <Link
         href={href}
-        className="px-3 py-1.5 rounded-pill text-ink-soft hover:text-ink hover:bg-line/60 transition-colors text-sm font-medium focus-visible:outline-2 focus-visible:outline-accent"
+        className="px-3 py-1.5 rounded-pill text-ink-soft hover:text-ink hover:bg-line/60 transition-colors text-sm font-medium focus-visible:outline-2 focus-visible:outline-accent active:scale-[0.98]"
       >
         {label}
       </Link>
@@ -74,7 +76,7 @@ function DockNavLink({
       <Link
         ref={itemRef}
         href={href}
-        className="relative inline-flex items-center px-3.5 py-1.5 rounded-pill text-sm font-medium text-ink-soft hover:text-ink hover:bg-line/60 transition-colors focus-visible:outline-2 focus-visible:outline-accent"
+        className="relative inline-flex items-center px-3.5 py-1.5 rounded-pill text-sm font-medium text-ink-soft hover:text-ink hover:bg-line/60 transition-colors focus-visible:outline-2 focus-visible:outline-accent active:scale-[0.98]"
       >
         {label}
       </Link>
@@ -87,21 +89,22 @@ export function Nav() {
   const mouseX = useMotionValue(Infinity);
   const reduceMotion = useReducedMotion();
 
+  const { scrollY } = useScroll();
+
   useEffect(() => {
-    const onScroll = () => {
-      if (headerRef.current) {
-        headerRef.current.classList.toggle("scrolled", window.scrollY > 16);
-      }
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (!headerRef.current) return;
+    const initial = scrollY.get() ?? 0;
+    headerRef.current.classList.toggle("scrolled", initial > 16);
+  }, [scrollY]);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    headerRef.current?.classList.toggle("scrolled", latest > 16);
+  });
 
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 [&.scrolled]:bg-paper/95 [&.scrolled]:backdrop-blur-md [&.scrolled]:border-b [&.scrolled]:border-line [&.scrolled]:shadow-soft border-b border-transparent"
+      className="sticky top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 [&.scrolled]:bg-paper/80 dark:[&.scrolled]:bg-paper-raised/80 [&.scrolled]:backdrop-blur-xl [&.scrolled]:border-b [&.scrolled]:border-line [&.scrolled]:shadow-soft border-b border-transparent"
     >
       <Container className="flex items-center justify-between h-16">
         {/* Brand */}
