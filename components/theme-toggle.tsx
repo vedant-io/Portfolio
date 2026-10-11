@@ -15,7 +15,7 @@ export function ThemeToggle() {
     return (
       <button
         aria-label="Toggle theme placeholder"
-        className="w-8 h-8 rounded-sm flex items-center justify-center text-ink-soft opacity-50"
+        className="w-8 h-8 rounded-pill flex items-center justify-center text-ink-soft opacity-50"
       >
         <span className="w-3.5 h-3.5" />
       </button>
@@ -28,7 +28,7 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      className="w-8 h-8 rounded-sm flex items-center justify-center text-ink-soft hover:text-ink transition-colors cursor-pointer border border-transparent hover:border-line"
+      className="w-8 h-8 rounded-pill flex items-center justify-center text-ink-soft hover:text-ink active:scale-[0.92] transition-[color,transform,border-color] duration-150 cursor-pointer border border-transparent hover:border-line focus-visible:outline-2 focus-visible:outline-accent"
     >
       {isDark ? (
         <svg
