@@ -8,10 +8,7 @@ export function About() {
       <Container>
         <Reveal className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-accent-text dark:text-accent-dark font-semibold">
-              About
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight mt-2">
+            <h2 className="font-sans text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight">
               Learning by building
             </h2>
           </div>
@@ -24,7 +21,7 @@ export function About() {
           <div className="rounded-2xl border border-line bg-paper-raised/70 p-6 md:p-8">
             <div className="flex flex-col gap-5">
               <p className="text-base md:text-lg text-ink leading-relaxed">
-                {siteConfig.bioIntro}
+                {siteConfig.bioHeadline}
               </p>
               <p className="text-base text-ink-soft leading-relaxed">
                 {siteConfig.bioPhilosophy}
@@ -36,7 +33,7 @@ export function About() {
               </div>
               <div className="pt-6 border-t border-line">
                 <div className="font-script text-3xl text-accent-text dark:text-accent-dark -rotate-2">
-                  — {siteConfig.name}
+                  {siteConfig.name}
                 </div>
               </div>
             </div>

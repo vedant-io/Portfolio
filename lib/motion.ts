@@ -1,6 +1,6 @@
 import type { Variants } from "motion/react";
 
-export const ease: [number, number, number, number] = [0.25, 0.46, 0.45, 0.94];
+export const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 /** Staggered fade-up reveal for hero elements */
 export function heroReveal(i: number, reduce: boolean | null) {
@@ -8,7 +8,7 @@ export function heroReveal(i: number, reduce: boolean | null) {
   return {
     initial: { opacity: 0, y: 18 },
     animate: { opacity: 1, y: 0 },
-    transition: { delay: i * 0.09, duration: 0.5, ease },
+    transition: { delay: i * 0.09, duration: 0.55, ease },
   };
 }
 
@@ -19,8 +19,8 @@ export const scrollRevealVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.08,
-      duration: 0.45,
+      delay: Math.min(i * 0.07, 0.28),
+      duration: 0.55,
       ease,
     },
   }),
@@ -32,7 +32,7 @@ export const scrollRevealVariantsReduced: Variants = {
   visible: (i: number = 0) => ({
     opacity: 1,
     transition: {
-      delay: i * 0.06,
+      delay: Math.min(i * 0.05, 0.2),
       duration: 0.35,
       ease: "easeOut" as const,
     },

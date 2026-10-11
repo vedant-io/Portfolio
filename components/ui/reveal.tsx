@@ -19,7 +19,7 @@ export function Reveal({
   return (
     <motion.div
       className={className}
-      initial={false}
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-10% 0px" }}
       variants={reduce ? scrollRevealVariantsReduced : scrollRevealVariants}

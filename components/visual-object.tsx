@@ -32,7 +32,10 @@ export function VisualObject() {
         aria-hidden="true"
       />
 
-      <div className="absolute -bottom-5 right-0 font-script text-sm text-accent-text dark:text-accent-dark rotate-[-2deg] pointer-events-none">
+      <div
+        className="absolute -bottom-5 right-0 font-script text-sm text-accent-text dark:text-accent-dark rotate-[-2deg] pointer-events-none"
+        aria-hidden="true"
+      >
         that&apos;s me 👋
       </div>
     </div>

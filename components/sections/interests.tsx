@@ -6,7 +6,7 @@ export function Interests() {
   return (
     <section
       id="expertise"
-      className="py-20 md:py-32 bg-paper-warm/50 border-y border-line"
+      className="py-20 md:py-32 bg-paper-raised/60 border-y border-line"
     >
       <Container>
         <Reveal className="mb-12 max-w-2xl">
@@ -14,7 +14,7 @@ export function Interests() {
             Expertise
           </p>
           <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight">
+            <h2 className="font-sans text-4xl md:text-5xl font-semibold text-ink leading-none tracking-tight">
               What I work with
             </h2>
             <span className="font-script text-2xl text-accent-text dark:text-accent-dark -rotate-2">

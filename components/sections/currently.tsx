@@ -29,7 +29,7 @@ export function Currently() {
                 </span>
 
                 <div>
-                  <h3 className="font-display text-xl text-ink">
+                  <h3 className="font-sans text-xl font-semibold text-ink">
                     {item.title}
                   </h3>
 

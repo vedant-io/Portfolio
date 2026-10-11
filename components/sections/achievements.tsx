@@ -7,7 +7,7 @@ export function Achievements() {
     <section className="py-16 md:py-20 border-b border-line">
       <Container>
         <Reveal>
-          <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink tracking-tight mb-8">
+          <h2 className="font-sans text-3xl md:text-4xl font-semibold text-ink tracking-tight mb-8">
             Recognition
           </h2>
         </Reveal>
@@ -15,7 +15,7 @@ export function Achievements() {
           {achievementsData.map((a, index) => (
             <Reveal key={a.title} delayIndex={index} className="flex-1">
               <article
-                className="rounded-2xl border p-5 h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover border-accent/30 bg-accent/8"
+                className="rounded-2xl border p-5 h-full transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-card-hover border-accent/30 bg-accent/8"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="w-2 h-2 rounded-full bg-accent" aria-hidden="true" />
@@ -23,7 +23,7 @@ export function Achievements() {
                     {a.year}
                   </span>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-ink leading-snug mb-2">
+                <h3 className="font-sans text-xl font-semibold text-ink leading-snug mb-2">
                   {a.title}
                 </h3>
                 <p className="text-sm text-ink-soft leading-relaxed">{a.detail}</p>

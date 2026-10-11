@@ -9,7 +9,7 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
           <Reveal className="md:col-span-7 flex flex-col gap-5">
-            <h2 className="font-display text-4xl md:text-5xl text-ink leading-tight">
+            <h2 className="font-sans text-4xl md:text-5xl text-ink leading-tight">
               Let&apos;s connect.
             </h2>
             <p className="text-sm text-ink-soft max-w-[44ch] leading-relaxed">
