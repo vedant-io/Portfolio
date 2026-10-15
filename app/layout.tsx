@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { ThemeProvider } from "@/components/theme-provider";
 import { caveat, fraunces, geistMono, geistSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -30,6 +31,8 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const measurementId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html
       lang="en"
@@ -43,6 +46,7 @@ export default function RootLayout({
     >
       <body className="min-h-[100dvh] bg-paper text-ink antialiased">
         <ThemeProvider>{children}</ThemeProvider>
+        <GoogleAnalytics measurementId={measurementId} />
       </body>
     </html>
   );
